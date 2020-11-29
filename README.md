@@ -33,7 +33,7 @@ Role can be specified via mention or it's name (use "quotes" if role has whitesp
   
 ### Hosting ###
   
-You need bot account ([*How to create and invite bot account?*](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)) and Java 11. Bot requires `Manage Server`, `Manage Roles`, `View Channels`, `Send Messages` permissions to work. Start bot with `java -jar InviteRoles-VERSION_HERE.jar` and these arguments:  
+You need bot account ([*How to create and invite bot account?*](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)) and Java 11. Bot requires `Manage Server`, `Manage Roles`, `View Channels`, `Send Messages` permissions to work and the Privileged Gateway Intent "Server Members Intent". Start bot with `java -jar InviteRoles-VERSION_HERE.jar` and these arguments:  
 + `--token "your bot token here"` - bot token.  
 + `--db "database_path_here.db"` - SQLite database path.  
   
