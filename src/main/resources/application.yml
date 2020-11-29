@@ -12,17 +12,13 @@ author:
   website_url: https://shimmermare.com
 
 
-
 spring:
   datasource:
-    url: "jdbc:h2:file:./data"
-    driverClassName: org.h2.Driver
-    username: default
-    # password: - no password, it's a one file DB after all
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: super_secret
+    driver-class-name: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
-  h2:
-    console:
-      enabled: true
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
