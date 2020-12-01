@@ -65,7 +65,7 @@ class CommandService(
         val content = message.contentRaw.trimStart()
         val prefix = basicConfiguration.commandPrefix
         if (content.length < 2 || !content.startsWith(prefix)) {
-            log.debug("(Guild: {}) Message {} skipped: not a command", guild, message)
+            log.debug("(Guild: {}) Message with id {} skipped: not a command", guild, message.id)
             return
         }
 
@@ -74,7 +74,7 @@ class CommandService(
 
         val parseResults = dispatcher.parse(content.substring(prefix.length).trimStart(), source)
         if (parseResults.context.nodes.isEmpty()) {
-            log.debug("(Guild: {}) Message {} skipped: unknown command '{}'", guild, message, content)
+            log.debug("(Guild: {}) Message with id {} skipped: unknown command '{}'", guild, message.id, content)
             return
         }
 
